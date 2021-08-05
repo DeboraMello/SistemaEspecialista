@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Programacao\\projetos\\letscode\\2021-08-CsharpDotnet\\sistemaEspecialista\\sistemaEspecialista\\sistemaEspecialista.csproj": {}
+    "D:\\Elenilson\\CURSOS\\Let's Code\\Formação\\Projeto\\sistemaEspecialista\\sistemaEspecialista.csproj": {}
   },
   "projects": {
-    "C:\\Programacao\\projetos\\letscode\\2021-08-CsharpDotnet\\sistemaEspecialista\\sistemaEspecialista\\sistemaEspecialista.csproj": {
+    "D:\\Elenilson\\CURSOS\\Let's Code\\Formação\\Projeto\\sistemaEspecialista\\sistemaEspecialista.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Programacao\\projetos\\letscode\\2021-08-CsharpDotnet\\sistemaEspecialista\\sistemaEspecialista\\sistemaEspecialista.csproj",
+        "projectUniqueName": "D:\\Elenilson\\CURSOS\\Let's Code\\Formação\\Projeto\\sistemaEspecialista\\sistemaEspecialista.csproj",
         "projectName": "sistemaEspecialista",
-        "projectPath": "C:\\Programacao\\projetos\\letscode\\2021-08-CsharpDotnet\\sistemaEspecialista\\sistemaEspecialista\\sistemaEspecialista.csproj",
-        "packagesPath": "C:\\Users\\cibel\\.nuget\\packages\\",
-        "outputPath": "C:\\Programacao\\projetos\\letscode\\2021-08-CsharpDotnet\\sistemaEspecialista\\sistemaEspecialista\\obj\\",
+        "projectPath": "D:\\Elenilson\\CURSOS\\Let's Code\\Formação\\Projeto\\sistemaEspecialista\\sistemaEspecialista.csproj",
+        "packagesPath": "C:\\Users\\ELENICE\\.nuget\\packages\\",
+        "outputPath": "D:\\Elenilson\\CURSOS\\Let's Code\\Formação\\Projeto\\sistemaEspecialista\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\cibel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ELENICE\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
