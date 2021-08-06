@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qvSMtNeB/SQ8CtnNAdkI9pbs/o2HuqyZ8DP8IaRdlNQq8RGbTfYhSVX2NfQoGXi1jAbRSEp7YvKKGbD4k6ur7Q==",
+  "dgSpecHash": "jT3uYTII83QHiXpI7HfFcnP6zDEpz9NmO9RUVBP51s7kJN64qcVFlnLnQa9b+6MOjye5WAa/LhrFdyrxmQqT2A==",
   "success": true,
-  "projectFilePath": "/home/debora/Documents/LetsCode/BackEnd/decisionTree/sistemaEspecialista/sistemaEspecialista.csproj",
+  "projectFilePath": "C:\\Programacao\\projetos\\letscode\\2021-08-CsharpDotnet\\sistemaEspecialista\\sistemaEspecialista\\sistemaEspecialista.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

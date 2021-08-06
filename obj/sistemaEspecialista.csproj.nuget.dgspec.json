@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/debora/Documents/LetsCode/BackEnd/decisionTree/sistemaEspecialista/sistemaEspecialista.csproj": {}
+    "C:\\Programacao\\projetos\\letscode\\2021-08-CsharpDotnet\\sistemaEspecialista\\sistemaEspecialista\\sistemaEspecialista.csproj": {}
   },
   "projects": {
-    "/home/debora/Documents/LetsCode/BackEnd/decisionTree/sistemaEspecialista/sistemaEspecialista.csproj": {
+    "C:\\Programacao\\projetos\\letscode\\2021-08-CsharpDotnet\\sistemaEspecialista\\sistemaEspecialista\\sistemaEspecialista.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/debora/Documents/LetsCode/BackEnd/decisionTree/sistemaEspecialista/sistemaEspecialista.csproj",
+        "projectUniqueName": "C:\\Programacao\\projetos\\letscode\\2021-08-CsharpDotnet\\sistemaEspecialista\\sistemaEspecialista\\sistemaEspecialista.csproj",
         "projectName": "sistemaEspecialista",
-        "projectPath": "/home/debora/Documents/LetsCode/BackEnd/decisionTree/sistemaEspecialista/sistemaEspecialista.csproj",
-        "packagesPath": "/home/debora/.nuget/packages/",
-        "outputPath": "/home/debora/Documents/LetsCode/BackEnd/decisionTree/sistemaEspecialista/obj/",
+        "projectPath": "C:\\Programacao\\projetos\\letscode\\2021-08-CsharpDotnet\\sistemaEspecialista\\sistemaEspecialista\\sistemaEspecialista.csproj",
+        "packagesPath": "C:\\Users\\cibel\\.nuget\\packages\\",
+        "outputPath": "C:\\Programacao\\projetos\\letscode\\2021-08-CsharpDotnet\\sistemaEspecialista\\sistemaEspecialista\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/debora/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\cibel\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.302/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
