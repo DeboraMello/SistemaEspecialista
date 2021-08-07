@@ -1,18 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace sistemaEspecialista
 {
-    class Loan
+    public class Loan
     {
-        static void ArvoreDecisoria()
+        public static void ArvoreDecisoria()
         {
+            var dic = new Dictionary<int, string>();
 
-            int idade;
             int opcao;
             Console.WriteLine($"Qual a idade do solicitante?");
-            idade = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"1 - Menor que 20 anos.");
+            Console.WriteLine($"2 - Maior ou igual a 20 anos.");
+            opcao = Convert.ToInt32(Console.ReadLine());
 
-            if (idade >= 20)
+            if (opcao ==2)
             {
                 Console.WriteLine($"Qual a renda do solicitante?");
                 Console.WriteLine($"1 - Não possui");
@@ -26,7 +29,7 @@ namespace sistemaEspecialista
                         Console.WriteLine($"Solicitação Negada.");
                         break;
                     case 2:
-                        ArvoreDecisoria();
+                        Console.WriteLine($"Solicitação Negada.");
                         break;
                     case 3:
                         ArvoreDecisoriaHistorico();
