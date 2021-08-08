@@ -15,13 +15,14 @@ namespace sistemaEspecialista
                 Console.WriteLine("Escolha uma das opçoes abaixo:");
                 Console.WriteLine("1 - Perfil do investidor");
                 Console.WriteLine("2 - Concessão de crédito");
+                Console.WriteLine("3 - Sair");
                 opcao = Convert.ToInt32(Console.ReadLine());
-            } while (opcao != 1 && opcao != 2);
+            } while (opcao != 1 && opcao != 2 && opcao != 3);
 
             switch (opcao)
             {
                 case 1:
-                    Console.WriteLine($"Aqui entram as perguntas");
+                    sistemaEspecialista.Suitability.decision();
                     break;
                 case 2:
                     //assim que acabar sobe o codigo
@@ -44,6 +45,9 @@ namespace sistemaEspecialista
                     dic.Add(7, node7);
                 
                     Loan.ArvoreDecisoria();
+                    break;
+                case 3:
+                    Console.WriteLine("Saindo...");
                     break;
             }
         }
