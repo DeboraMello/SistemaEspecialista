@@ -60,7 +60,7 @@ namespace sistemaEspecialista
                 case 5:
                     Console.WriteLine("[1] - Posso correr algum risco pequeno!");
                     Console.WriteLine("[2] - Vejo como oportunidade de aumentar ganhos!");
-                    Console.WriteLine("[3] - Sou totalmente reverso!");
+                    Console.WriteLine("[3] - Sou totalmente avesso!");
                     break;
             }
         }
@@ -103,7 +103,7 @@ namespace sistemaEspecialista
 
         public static void decision()
         {
-            int opcao;
+            int option;
             int points = 0;
             for (int i = 1; i < 6; i++)
             {
@@ -111,13 +111,13 @@ namespace sistemaEspecialista
                 do
                 {
                     Console.Write("Resposta: ");
-                    opcao = Convert.ToInt32(Console.ReadLine());
+                    option = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine();
 
-                    if (opcao != 1 && opcao != 2 && opcao != 3) Console.WriteLine("Opção Inválida, tente novamente!");
+                    if (option != 1 && option != 2 && option != 3) Console.WriteLine("Opção Inválida, tente novamente!");
 
-                } while (opcao != 1 && opcao != 2 && opcao != 3);
-                points = points + point(i, opcao);
+                } while (option != 1 && option != 2 && option != 3);
+                points = points + point(i, option);
             }
             
             if (points / 5 < 50) Console.WriteLine("PERFIL CONSERVADOR!");
