@@ -9,23 +9,23 @@ namespace sistemaEspecialista
             switch (question)
             {
                 case 1:
-                    Console.WriteLine($"O que você pensa sobre investimentos?");
+                    Console.WriteLine("O que você pensa sobre investimentos?");
                     break;
 
                 case 2:
-                    Console.WriteLine($"Qual seu objetivo ao investir?");
+                    Console.WriteLine("Qual seu objetivo ao investir?");
                     break;
 
                 case 3:
-                    Console.WriteLine($"Quais suas prioridades?");
+                    Console.WriteLine("Quais suas prioridades?");
                     break;
 
                 case 4:
-                    Console.WriteLine($"O que sabe sobre o mercado de investimentos?");
+                    Console.WriteLine("O que sabe sobre o mercado de investimentos?");
                     break;
 
                 case 5:
-                    Console.WriteLine($"Como reage diante de riscos?");
+                    Console.WriteLine("Como reage diante de riscos?");
                     break;
             }
 
@@ -33,34 +33,34 @@ namespace sistemaEspecialista
             {
 
                 case 1:
-                    Console.WriteLine($"1 - Gostaria de variar os investimentos!");
-                    Console.WriteLine($"2 - Penso que arriscar é fundamental!");
-                    Console.WriteLine($"3 - Gostaria de segurança, não me importo com o prazo!");
+                    Console.WriteLine("[1] - Gostaria de variar os investimentos!");
+                    Console.WriteLine("[2] - Penso que arriscar é fundamental!");
+                    Console.WriteLine("[3] - Gostaria de segurança, não me importo com o prazo!");
 
                     break;
 
                 case 2:
-                    Console.WriteLine($"1 - Ganhar dinheiro acima da inflação e com renda!");
-                    Console.WriteLine($"2 - Proteger meu dinheiro e não perder!");
-                    Console.WriteLine($"3 - Aumentar meu capital!");
+                    Console.WriteLine("[1] - Ganhar dinheiro acima da inflação e com renda!");
+                    Console.WriteLine("[2] - Proteger meu dinheiro e não perder!");
+                    Console.WriteLine("[3] - Aumentar meu capital!");
                     break;
 
                 case 3:
-                    Console.WriteLine($"1 - Rentabilidade!");
-                    Console.WriteLine($"2 - Diversificação e ganhos!");
-                    Console.WriteLine($"3 - Segurança!");
+                    Console.WriteLine("[1] - Rentabilidade!");
+                    Console.WriteLine("[2] - Diversificação e ganhos!");
+                    Console.WriteLine("[3] - Segurança!");
                     break;
 
                 case 4:
-                    Console.WriteLine($"1 - Conheço e já investi em renda variável!");
-                    Console.WriteLine($"2 - Já ouvi sobre Tesouro Direito e CDB!");
-                    Console.WriteLine($"3 - Invisto rotineiramente na bolsa!");
+                    Console.WriteLine("[1] - Conheço e já investi em renda variável!");
+                    Console.WriteLine("[2] - Já ouvi sobre Tesouro Direito e CDB!");
+                    Console.WriteLine("[3] - Invisto rotineiramente na bolsa!");
                     break;
 
                 case 5:
-                    Console.WriteLine($"1 - Posso correr algum risco pequeno!");
-                    Console.WriteLine($"2 - Vejo como oportunidade de aumentar ganhos!");
-                    Console.WriteLine($"3 - Sou totalmente reverso!");
+                    Console.WriteLine("[1] - Posso correr algum risco pequeno!");
+                    Console.WriteLine("[2] - Vejo como oportunidade de aumentar ganhos!");
+                    Console.WriteLine("[3] - Sou totalmente reverso!");
                     break;
             }
         }
@@ -110,16 +110,19 @@ namespace sistemaEspecialista
                 questions(i, i);
                 do
                 {
+                    Console.Write("Resposta: ");
                     opcao = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine();
 
-                    if (opcao != 1 && opcao != 2 && opcao != 3) Console.WriteLine("Opção Invalida, tente novamente");
+                    if (opcao != 1 && opcao != 2 && opcao != 3) Console.WriteLine("Opção Inválida, tente novamente!");
 
                 } while (opcao != 1 && opcao != 2 && opcao != 3);
                 points = points + point(i, opcao);
             }
-            if (points / 5 <= 50) Console.WriteLine("Perfil conservador!");
-            else if (points / 5 > 50 && points / 5 <= 75) Console.WriteLine("Perfil moderado!");
-            else if (points / 5 > 100) Console.WriteLine("Perfil arrojado!");
+            
+            if (points / 5 < 50) Console.WriteLine("PERFIL CONSERVADOR!");
+            else if (points / 5 >= 50 && points / 5 <= 75) Console.WriteLine("PERFIL MODERADO!");
+            else if (points / 5 > 100) Console.WriteLine("PERFIL ARROJADO!");
         }
     }
 }

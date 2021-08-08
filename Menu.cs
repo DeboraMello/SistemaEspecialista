@@ -19,7 +19,9 @@ namespace sistemaEspecialista
                 Console.WriteLine(" [2] - Concessão de crédito");
                 Console.WriteLine(" [3] - Sair");
                 Console.WriteLine("+------------------------------+");
+                Console.Write("Resposta: ");
                 option = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine();
             } while (option != 1 && option != 2 && option != 3);
 
             switch (option)
