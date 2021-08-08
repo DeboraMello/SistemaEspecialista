@@ -7,7 +7,7 @@ namespace sistemaEspecialista
     {
         public static void main() 
         {
-            int opcao;
+            int option;
 
             do
             {
@@ -19,10 +19,10 @@ namespace sistemaEspecialista
                 Console.WriteLine(" [2] - Concessão de crédito");
                 Console.WriteLine(" [3] - Sair");
                 Console.WriteLine("+------------------------------+");
-                opcao = Convert.ToInt32(Console.ReadLine());
-            } while (opcao != 1 && opcao != 2 && opcao != 3);
+                option = Convert.ToInt32(Console.ReadLine());
+            } while (option != 1 && option != 2 && option != 3);
 
-            switch (opcao)
+            switch (option)
             {
                 case 1:
                     sistemaEspecialista.Suitability.decision();
