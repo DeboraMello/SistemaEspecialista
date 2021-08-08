@@ -78,13 +78,12 @@ namespace sistemaEspecialista
 
                 } while (option != 1 && option != 2 && option != 3);
 
-                points = points + question.Alternatives[option - 1].Points;
-                Console.WriteLine(points);
+                points = points + question.Alternatives[option - 1].Points;                
             }
 
             if (points / 5 < 50) Console.WriteLine("PERFIL CONSERVADOR!");
             else if (points / 5 >= 50 && points / 5 <= 75) Console.WriteLine("PERFIL MODERADO!");
-            else if (points / 5 > 100) Console.WriteLine("PERFIL ARROJADO!");
+            else if (points / 5 > 75) Console.WriteLine("PERFIL ARROJADO!");
         } 
     }
 }
