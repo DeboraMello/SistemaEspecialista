@@ -8,3 +8,4 @@ obj/Debug/net5.0/*.txt
 obj/Debug/net5.0/*.dll
 obj/Debug/net5.0/*.pdb
 .vs/
+obj/Debug/net5.0/apphost.exe
