@@ -5,94 +5,106 @@ namespace sistemaEspecialista
 {
     public class Loan
     {
-        public static void ArvoreDecisoria()
+        
+        public static String ArvoreDecisoria()
         {
-            var dic = new Dictionary<int, string>();
+            List<BinaryAnswerTreeNode> listaNos = BuildArvore();
 
             int opcao;
+
+            for (int i = 0; i < listaNos.Count; i++)
+            {
+                Console.WriteLine(listaNos[i].Pergunta);
+                Console.WriteLine(listaNos[i].RespostaOpcaoUm);
+                Console.WriteLine(listaNos[i].RespostaOpcaoDois);
+
+                opcao = Convert.ToInt32(Console.ReadLine());
+                if((opcao == 2)&&(i<5)){
+                    
+                }
+
+                
+            }
+
             Console.WriteLine($"Qual a idade do solicitante?");
             Console.WriteLine($"1 - Menor que 20 anos.");
             Console.WriteLine($"2 - Maior ou igual a 20 anos.");
             opcao = Convert.ToInt32(Console.ReadLine());
 
-            if (opcao ==2)
+            if (opcao == 2)
             {
-                Console.WriteLine($"Qual a renda do solicitante?");
+                Console.WriteLine($"Possui renda?");
                 Console.WriteLine($"1 - Não possui");
-                Console.WriteLine($"2 - Até 3 salários");
-                Console.WriteLine($"3 - Mais de 3 salários");
+                Console.WriteLine($"2 - Possui");
+
                 opcao = Convert.ToInt32(Console.ReadLine());
 
-                switch (opcao)
+                if (opcao == 2)
                 {
-                    case 1:
-                        Console.WriteLine($"Solicitação Negada.");
-                        break;
-                    case 2:
-                        Console.WriteLine($"Solicitação Negada.");
-                        break;
-                    case 3:
-                        ArvoreDecisoriaHistorico();
-                        break;
-                }
-            }
-            else
-            {
-                Console.WriteLine($"Solicitação Negada.");
-            }
-        }
+                    Console.WriteLine($"A renda é menor ou maior que 3 salários?");
+                    Console.WriteLine($"1 - Menor");
+                    Console.WriteLine($"2 - Maior");
 
-        static void ArvoreDecisoriaHistorico()
-        {
-            int opcao;
-            int opcao2;
-            int opcao3;
-            Console.WriteLine("Qual o histórico de crédito do solicitante?");
-            Console.WriteLine("1 - Endividado.");
-            Console.WriteLine("2 - Nenhuma dívida.");
-            opcao = Convert.ToInt32(Console.ReadLine());
-
-            switch (opcao)
-            {
-                case 1:
-                    Console.WriteLine("Solicitação Negada.");
-                    break;
-                case 2:
-                    Console.WriteLine("Você já deixou de pagar alguma dívida?");
-                    Console.WriteLine("1 - Sim");
-                    Console.WriteLine("2 - Não");
-                    opcao2 = Convert.ToInt32(Console.ReadLine());
-
-                    if (opcao2 == 1)
+                    opcao = Convert.ToInt32(Console.ReadLine());
+                    if (opcao == 1)
                     {
-                        Console.WriteLine("Crédito de até R$ 1000 reais.");
-                    }
-                    else if (opcao2 == 2)
-                    {
-                        Console.WriteLine("Há quanto tempo já tem conta no Banco?");
-                        Console.WriteLine("1 - Até 1 ano.");
-                        Console.WriteLine("2 - Mais de 1 ano.");
-                        opcao3 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine($"Como é o hitórico de crédito do solicitante?");
+                        Console.WriteLine($"1 - Possui dívidas.");
+                        Console.WriteLine($"2 - Nenhuma dívida.");
 
-                        switch (opcao3)
+                        opcao = Convert.ToInt32(Console.ReadLine());
+                        if (opcao == 2)
                         {
-                            case 1:
-                                Console.WriteLine("Crédito de até R$ 1000 reais.");
-                                break;
-                            case 2:
-                                Console.WriteLine("Crédito mais de R$ 1000 reais.");
-                                break;
+                            Console.WriteLine($"Já deixou de pagar alguma vez?");
+                            Console.WriteLine($"1 - Sim");
+                            Console.WriteLine($"2 -Não");
+
+                            opcao = Convert.ToInt32(Console.ReadLine());
+                            if (opcao == 1)
+                            {
+                                return ("SIM - Autorizar empréstimo até R$1000");
+                            }
+                            else if (opcao == 2)
+                            {
+                                Console.WriteLine($"Quanto tempo de conta no banco?");
+                                Console.WriteLine($"1 - Até um ano.");
+                                Console.WriteLine($"2 - Mais de um ano.");
+
+                                opcao = Convert.ToInt32(Console.ReadLine());
+
+                                if (opcao == 1)
+                                {
+                                    return ("SIM - Autorizar empréstimo até R$1000");
+                                } else if(opcao == 2){
+                                    return ("SIM - Autorizar empréstimo acima de R$1000");
+                                }
+                            }
                         }
                     }
-                    else
-                    {
-                        Console.WriteLine("Opção inválida.");
-                    }
-                    break;
-                default:
-                    Console.WriteLine("Opção inválida.");
-                    break;
+                }
             }
+
+            return ("Solicitação Negada.");
+        }
+
+        public static List<BinaryAnswerTreeNode> BuildArvore() {
+            BinaryAnswerTreeNode node1 = new BinaryAnswerTreeNode(1, "Qual a idade do solicitante?", "1 - Menor que 20 anos.", "2 - 20 anos ou mais.");
+            BinaryAnswerTreeNode node2 = new BinaryAnswerTreeNode(2, "Possui renda?", "1 - Não possui", "2 - Possui");
+            BinaryAnswerTreeNode node3 = new BinaryAnswerTreeNode(3, "Menor ou maior que 3 salários?", "1 - Menor", "2 - Maior");
+            BinaryAnswerTreeNode node4 = new BinaryAnswerTreeNode(4, "Como é o hitórico de crédito do solicitante?", "1 - Possui dívidas.", "2 - Nenhuma dívida.");
+            BinaryAnswerTreeNode node5 = new BinaryAnswerTreeNode(5, "Já deixou de pagar alguma vez?", "1 - Sim.", "2 - Não.");
+            BinaryAnswerTreeNode node6 = new BinaryAnswerTreeNode(6, "Quanto tempo de conta no banco?", "1 - Até um ano.", "2 - Mais de um ano.");
+
+            List<BinaryAnswerTreeNode> listaNos = new List<BinaryAnswerTreeNode>();
+
+            listaNos.Add(node1);
+            listaNos.Add(node2);
+            listaNos.Add(node3);
+            listaNos.Add(node4);
+            listaNos.Add(node5);
+            listaNos.Add(node6);
+
+            return listaNos;
         }
 
     }

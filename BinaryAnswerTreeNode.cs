@@ -1,10 +1,13 @@
 public class BinaryAnswerTreeNode
 {
-    private string Pergunta { get; set; }
-    private string RespostaOpcaoUm { get; set; }
-    private string RespostaOpcaoDois { get; set; }
+    public int Id { get; set; }
+    public string Pergunta { get; set; }
+    public string RespostaOpcaoUm { get; set; }
+    public string RespostaOpcaoDois { get; set; }
 
-    public BinaryAnswerTreeNode(string pergunta, string respostaOpcaoUm, string respostaOpcaoDois){
+    public BinaryAnswerTreeNode(int id, string pergunta, string respostaOpcaoUm, string respostaOpcaoDois)
+    {
+        Id = id;
         Pergunta = pergunta;
         RespostaOpcaoUm = respostaOpcaoUm;
         RespostaOpcaoDois = respostaOpcaoDois;
