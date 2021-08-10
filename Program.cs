@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace sistemaEspecialista
+﻿namespace sistemaEspecialista
 {
     class Program
     {

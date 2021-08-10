@@ -6,7 +6,8 @@ public class Question
     public string Description { get; set; }
     public List<Alternative> Alternatives { get; set; }
     
-    public Question(int id, string description, List<Alternative> alternatives){
+    public Question(int id, string description, List<Alternative> alternatives)
+    {
         Id = id;
         Description = description;
         Alternatives = alternatives;
