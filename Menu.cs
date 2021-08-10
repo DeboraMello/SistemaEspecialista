@@ -27,8 +27,8 @@ namespace sistemaEspecialista
             switch (option)
             {
                 case 1:
-                    // sistemaEspecialista.Suitability.decision();
-                    sistemaEspecialista.SuitabilityForm.run();
+                    sistemaEspecialista.Suitability.decision();
+                    // sistemaEspecialista.Form.Start();
                     break;
                 case 2:
                     //assim que acabar sobe o codigo

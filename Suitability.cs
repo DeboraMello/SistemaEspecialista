@@ -36,7 +36,6 @@ namespace sistemaEspecialista
                     Console.WriteLine("[1] - Gostaria de variar os investimentos!");
                     Console.WriteLine("[2] - Penso que arriscar é fundamental!");
                     Console.WriteLine("[3] - Gostaria de segurança, não me importo com o prazo!");
-
                     break;
 
                 case 2:
