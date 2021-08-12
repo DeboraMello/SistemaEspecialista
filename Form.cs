@@ -9,46 +9,7 @@ namespace sistemaEspecialista
         public string Description { get; set; }
         public List<Question> Questions { get; set; }
 
-        public static void Start()
-        {
-            Form form = new Form();
-            form.ProcessForm();
-        }
-
-        public void ProcessForm()
-        {
-            int option;
-            int points = 0;
-                
-            foreach (Question question in this.Questions)
-            {
-                Console.WriteLine(question.Description);
-
-                foreach (Alternative alternative in question.Alternatives)
-                {
-                    Console.WriteLine("[{0}] - {1}", alternative.Id, alternative.Description);
-                } 
-
-                do
-                {
-                    Console.Write("Resposta: ");
-                    option = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine();  
-
-                    if (option != 1 && option != 2 && option != 3) 
-                    {
-                        Console.WriteLine("Opção Inválida, tente novamente!");
-                    }
-
-                } while (option != 1 && option != 2 && option != 3);
-
-                points = points + question.Alternatives[option - 1].Points;                
-            }
-
-            if (points / 5 < 50) Console.WriteLine("PERFIL CONSERVADOR!");
-            else if (points / 5 >= 50 && points / 5 <= 75) Console.WriteLine("PERFIL MODERADO!");
-            else if (points / 5 > 75) Console.WriteLine("PERFIL ARROJADO!");
-        }
+        private int Points { get; set; }
 
         public Form()
         {
@@ -99,6 +60,53 @@ namespace sistemaEspecialista
             Id = 1;
             Description = "Suitability";
             Questions = questions;       
+        }
+
+        public static void Start()
+        {
+            Form form = new Form();
+            form.ProcessForm();
+            form.CalculateProfileAndShow();
+        }
+
+        private void ProcessForm()
+        {
+            int option;
+            this.Points = 0;
+                
+            foreach (Question question in this.Questions)
+            {
+                Console.WriteLine(question.Description);
+
+                foreach (Alternative alternative in question.Alternatives)
+                {
+                    Console.WriteLine("[{0}] - {1}", alternative.Id, alternative.Description);
+                } 
+
+                do
+                {
+                    Console.Write("Resposta: ");
+                    option = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine();  
+
+                    if (option != 1 && option != 2 && option != 3) 
+                    {
+                        Console.WriteLine("Opção Inválida, tente novamente!");
+                    }
+
+                } while (option != 1 && option != 2 && option != 3);
+
+                this.Points = this.Points + question.Alternatives[option - 1].Points;                
+            }
+        }
+
+        private void CalculateProfileAndShow()
+        {            
+            int average = (this.Questions.Count > 0) ? (this.Points / this.Questions.Count) : 0;
+
+            if (average < 50) Console.WriteLine("PERFIL CONSERVADOR!");
+            else if (average >= 50 && average <= 75) Console.WriteLine("PERFIL MODERADO!");
+            else if (average > 75) Console.WriteLine("PERFIL ARROJADO!");
         }
     }
 }

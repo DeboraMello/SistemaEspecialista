@@ -30,8 +30,7 @@ namespace sistemaEspecialista
                     sistemaEspecialista.Suitability.decision();
                     // sistemaEspecialista.Form.Start();
                     break;
-                case 2:
-                    
+                case 2:                    
                     sistemaEspecialista.Loan.ArvoreDecisoria();
                     break;
                 case 3:
