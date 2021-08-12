@@ -20,19 +20,16 @@ namespace sistemaEspecialista
 
                 opcao = Convert.ToInt32(Console.ReadLine());
                 if(opcao == 1){
-                    if(i >= 4){
-                       Console.WriteLine("SIM - Autorizar empréstimo até R$1000");
-                        break; 
-                    }    
-                    Console.WriteLine("Solicitação Negada.");
-                    break;                
+                    if(i >= 4){ 
+                       return "SIM - Autorizar empréstimo até R$1000";
+                    }      
+                    return "Solicitação Negada.";                
                 }
-                
                 if(opcao == 2 && i == 5){
-                    Console.WriteLine("SIM - Autorizar empréstimo acima de R$1000");
+                    return "SIM - Autorizar empréstimo acima de R$1000";
                 }        
             }
-            return "Solicitação Negada.";
+            return string.Empty;
         }
 
             // Console.WriteLine($"Qual a idade do solicitante?");

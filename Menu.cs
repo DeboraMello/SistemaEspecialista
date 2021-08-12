@@ -31,7 +31,7 @@ namespace sistemaEspecialista
                     // sistemaEspecialista.Form.Start();
                     break;
                 case 2:                    
-                    sistemaEspecialista.Loan.ArvoreDecisoria();
+                    Console.WriteLine(sistemaEspecialista.Loan.ArvoreDecisoria());
                     break;
                 case 3:
                     Console.WriteLine("Saindo...");
