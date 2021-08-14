@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace sistemaEspecialista
 {
@@ -27,8 +26,8 @@ namespace sistemaEspecialista
             switch (option)
             {
                 case 1:
-                    sistemaEspecialista.Suitability.decision();
-                    // sistemaEspecialista.Form.Start();
+                    sistemaEspecialista.Suitability.decision(); // Utilizando Switch
+                    // sistemaEspecialista.Form.Start(); // Utilizando Objetos
                     break;
                 case 2:                    
                     Console.WriteLine(sistemaEspecialista.Loan.ArvoreDecisoria());
